@@ -1,1 +1,21 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
+:root {
+--main-font: 'Inter-Variable';
+--accent-font: 'PressStart2P';
+--main-weight: 400;
+--accent-weight: 700;
+--bg-color: rgba(255, 255, 255, 1);
+--accent-color: rgba(0, 0, 0, 1);
+--gradient-color-first: #d3d3d3;
+--gradient-color-second-start: #e7e7e7;
+--gradient-color-second-end: #1a1a1a;
+--bg-image: 
+  repeating-linear-gradient(to right, var(--gradient-color-first), var(--gradient-color-first) 2px, transparent, transparent 4px),
+  repeating-linear-gradient(to bottom, var(--gradient-color-first), var(--gradient-color-first) 2px, transparent, transparent 4px),
+  linear-gradient(to bottom, var(--gradient-color-second-start) 0.01% , var(--gradient-color-second-end) 100%);
+--content-width: clamp(23.438rem, 16.285rem + 30.516vw, 43.75rem); ;
+--accent-size: 14px;
+--common-size: 18px;
+--small-gap: 25px;
+--large-gap: 50px;
+}

@@ -17,4 +17,143 @@
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
+  font-family: var(--main-font), sans-serif;
+  font-variation-settings: 'wght' var(--main-weight);
+  background-color: var(--bg-color);
+  color: var(--accent-color);
+  background-image: var(--bg-image);
+  background-size: cover;
+  background-attachment: fixed;
+  inline-size: 100%;
+  font-size: var(--common-size);
+  position: relative;
 }
+
+.section-content {
+  inline-size: var(--content-width); 
+  margin: 0 auto;
+}
+
+.header {
+  font-family: 'PressStart2P' ,serif;
+  background-color: var(--bg-color);
+  border: 2px solid var(--accent-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-block-start: 100px;
+}
+
+.header__title {
+  font-size: clamp(3.063rem, 2.71rem + 1.502vw, 4.063rem);
+  margin-block-start: clamp(7.5rem, 7.148rem + 1.502vw, 8.5rem);
+  margin-block-end: 20px;
+  font-weight: var(--main-weight);
+}
+
+.header__subtitle {
+  font-size: clamp(0.875rem, 0.677rem + 0.845vw, 1.438rem);
+  text-transform: uppercase;
+  margin-block-end: 22px;
+  font-weight: var(--main-weight);
+}
+
+.theme-menu__list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-inline-start: 20px;
+  margin-block-end: var(--small-gap);
+}
+
+.theme-menu__button {
+  appearance: none;
+  border: 0;
+  background-color: transparent;
+  text-transform: uppercase;
+  font-size: var(--accent-size);
+  font-weight: var(--main-weight);
+  padding: 0;
+  position: relative;
+  line-height: 14px;
+}
+
+.theme-menu__button:disabled {
+  opacity: 60%;
+}
+
+.theme-menu__button:disabled::before {
+  content: '▶';
+  position: absolute;
+  inset-inline-start: -20px;
+}
+
+.main {
+  margin-block-start: 100px;
+}
+
+.main__card-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--large-gap);
+}
+
+.card-list__item {
+  background-color: var(--bg-color);
+  border: 2px solid var(--accent-color);
+  display: flex;
+  flex-direction: column;
+}
+
+.card__title {
+  font-family: inherit;
+  font-variation-settings: 'wght' var(--accent-weight);
+  padding-inline: 10px;
+  padding-block: 4px;
+  font-size: var(--common-size);
+  line-height: 21.78px;
+}
+
+.card__image {
+  inline-size: 100%;
+  block-size: var(--content-width);
+  object-fit: cover;
+  object-position: right;
+  border-block: 2px solid var(--accent-color);
+}
+
+.card__text {
+  margin: var(--small-gap);
+  line-height: 21px;
+}
+
+.card__memories {
+  line-height: 21px;
+  margin-inline: var(--small-gap);
+  /* margin-block-end: var(--small-gap); */
+}
+.card__like-button {
+  margin: var(--small-gap);
+  inline-size: 170px;
+  block-size: 38px;
+  align-self: end;
+  background-color: transparent;
+  font-family: var(--accent-font);
+  font-size: var(--accent-size);
+  line-height: 12.6px;
+  border: none;
+  display: flex;
+  padding: 0;
+  align-items: center;
+  justify-content: end;
+  gap: 12px;
+}
+
+.button__text {
+  border: 2px solid var(--accent-color);
+  display: block;
+  /* block-size: 100%; */
+  inline-size: 130px;
+  padding-block: 10.5px;
+}
+
