@@ -14,7 +14,7 @@
   --gradient-color-second-start: #007f0c;
   --gradient-color-second-end: #004306;
   --button-text-color: rgb(0 204 20 / 1);
-   --heart-contour-color:: rgb(0 204 20 / 1);
+  --heart-contour-color: rgb(0 204 20 / 1);
 
   --bg-image: repeating-linear-gradient(
       to right,
@@ -47,7 +47,7 @@
     --gradient-color-second-start: #007f0c;
     --gradient-color-second-end: #004306;
     --button-text-color: rgb(0 204 20 / 1);
-     --heart-contour-color:: rgb(0 204 20 / 1);
+    --heart-contour-color: rgb(0 204 20 / 1);
     --bg-image: repeating-linear-gradient(
         to right,
         var(--gradient-color-first),
@@ -78,7 +78,7 @@
   --gradient-color-first: #d3d3d3;
   --gradient-color-second-start: #e7e7e7;
   --gradient-color-second-end: #1a1a1a;
-   --heart-contour-color:: rgb(0 0 0 / 1);
+  --heart-contour-color:: rgb(0 0 0 / 1);
   --bg-image: repeating-linear-gradient(
       to right,
       var(--gradient-color-first),
