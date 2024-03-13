@@ -33,8 +33,16 @@
   --accent-size: 14px;
   --common-size: 18px;
   --small-gap: 25px;
-  --large-gap: 50px;
+  --large-gap: 49px;
+  --button-text-color: #fff;
+  /* --contour-color: rgb(0 0 0 / 1); */
+  --heart-sparks-color: rgba(255, 0, 0, 1);
+  --heart-core-color: rgba(255, 0, 0, 1);
+  --heart-main-body-color: rgba(255, 0, 0, 1);
+  --heart-contour-color: rgb(0 0 0 / 1);;
 }
+
+
 
 @media (width <= 375px) {
 
@@ -42,3 +50,4 @@
     --content-width: 100%;
   }
 }
+

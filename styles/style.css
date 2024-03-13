@@ -149,10 +149,15 @@
   font-size: var(--common-size);
   line-height: 21.78px;
   position: relative;
+  /* border-block-end: 2px solid var(--accent-color); */
 }
 
 .card__wrapper {
   position: relative;
+  display: flex;
+  border-block: 2px solid var(--accent-color);
+  /* block-size: fit-content; */
+  /* aspect-ratio: 1 / 1; */
 }
 
 .card__image {
@@ -160,7 +165,7 @@
   /* block-size: var(--content-width); */
   object-fit: cover;
   object-position: right;
-  outline: 2px solid var(--accent-color);
+  /* outline: 2px solid var(--accent-color); */
   aspect-ratio: 1 / 1;
 }
 
@@ -209,7 +214,7 @@
   margin-block-end: var(--small-gap);
 }
 
-.card__heart-button {
+.card__icon-button {
   background-color: transparent;
   border: none;
   padding: 0;
@@ -218,11 +223,11 @@
   position: relative;
 }
 
-.card__heart-button:focus, .card__heart-button:focus-visible {
+.card__icon-button:focus, .card__icon-button:focus-visible {
   outline: none;
 }
 
-.card__heart-button:focus-visible {
+.card__icon-button:focus-visible {
   outline: 2px solid var(--accent-color);
 }
 
@@ -260,12 +265,42 @@
 }
 
 .button__text {
-  border: 2px solid var(--accent-color);
   display: block;
   /* block-size: 100%; */
   inline-size: 130px;
   padding-block: 11.5px;
   line-height: 12.6px;
+  position: relative;
+  z-index: 1;
+  mix-blend-mode: difference;
+  /* border: 2px solid var(--button-text-color); */
+  border: none;
+}
+
+.button {
+  position: relative;
+  cursor: pointer;
+  color: var(--button-text-color);
+  border: 2px solid var(--accent-color);
+  background-color: transparent;
+  padding: 0;
+}
+
+
+.button::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: var(--accent-color);
+  transform: scaleX(0);
+  /* transform: scaleY(1.1); */
+  transform-origin: left;
+  transition: transform 0.5s ease-in-out;
+  /* border: 2px solid var(--button-text-color); */
+}
+
+.button:hover::before {
+  transform: scaleX(1);
 }
 
 .main__save-memories {
@@ -280,15 +315,109 @@
   border: none;
   outline: 2px solid var(--accent-color);
   background-color: var(--bg-color);
+  padding-inline: 6px;
 }
 
 .save-memories__icon {
   inline-size: clamp(1.3125rem, 1.904rem + -0.6573vw, 1.75rem);
-  color: var(--accent-color);
+  color: var(--button-text-color);
+  mix-blend-mode: difference;
 }
 
 .save-memories__text {
   font-family: var(--accent-font), serif;
   font-size: var(--accent-size);
   line-height: 12.6px;
+  mix-blend-mode: difference;
+}
+
+.sparks {
+  opacity: 0;
+}
+
+#dialog-menu[open] {
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  gap: 30px;
+  /* inline-size: clamp(16.063rem, 15.27rem + 3.38vw, 18.313rem); */
+  background-color: var(--bg-color);
+  inline-size: clamp(21.313rem, 20.96rem + 1.502vw, 22.313rem);
+  /* padding: 0; */
+  padding-inline: clamp(2.625rem, 2.889rem + -1.127vw, 1.875rem);
+  padding-block: 30px;
+  color: var(--accent-color);
+  border: 2px solid var(--accent-color);
+}
+
+#dialog-menu::backdrop {
+  background-color: #000;
+  opacity: 0.75;
+}
+
+.dialog__content {
+  display: flex;
+  /* padding-block-start: 30px;
+  padding-inline: clamp(2.625rem, 2.889rem + -1.127vw, 1.875rem); */
+  gap: 20px;
+}
+
+.dialog__icon {
+  inline-size: 39px;
+  flex-shrink: 0;
+}
+
+.dialog__text {
+  font-family: var(--accent-font);
+  font-size: var(--accent-size);
+  text-transform: uppercase;
+  line-height: 21px;
+}
+
+.dialog__button {
+  font-family: var(--accent-font);
+  font-size: var(--accent-size);
+  inline-size: 100%;
+  /* inline-size: clamp(16.063rem, 15.27rem + 3.38vw, 18.313rem); */
+  block-size: 38px;
+  /* margin-block-end: 30px; */
+}
+
+.dialog__button-text {
+  color: var(--button-text-color);
+  mix-blend-mode: difference;
+  text-transform: uppercase;
+}
+
+.image-filter-house {
+  filter: contrast(150%);
+}
+
+.image-filter-fish {
+  
+  filter: saturate(158%);
+}
+
+.image-filter-serfer {
+  filter: blur(0.2rem);
+}
+
+.image-filter-bike {
+  filter: grayscale(0.8);
+} 
+
+.image-filter-hug {
+  filter: brightness(150%);
+}
+
+.image-filter-ancient {
+  filter: hue-rotate(-190deg);
+}
+
+.image-filter-knight {
+  filter: sepia(80%);
+}
+
+.image-filter-workplace {
+  filter: blur(1px) contrast(200%);
 }
