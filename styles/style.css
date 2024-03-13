@@ -223,18 +223,13 @@
   position: relative;
 }
 
-.card__icon-button:focus, .card__icon-button:focus-visible {
+.card__icon-button:focus,
+.card__icon-button:focus-visible {
   outline: none;
 }
 
 .card__icon-button:focus-visible {
   outline: 2px solid var(--accent-color);
-}
-
-.like-icon {
-  /* inline-size: 100% */
-  /* inline-size: 27px;
-  block-size: 24px; */
 }
 
 .card__like-button {
@@ -285,7 +280,6 @@
   background-color: transparent;
   padding: 0;
 }
-
 
 .button::before {
   content: '';
@@ -394,7 +388,6 @@
 }
 
 .image-filter-fish {
-  
   filter: saturate(158%);
 }
 
@@ -404,7 +397,7 @@
 
 .image-filter-bike {
   filter: grayscale(0.8);
-} 
+}
 
 .image-filter-hug {
   filter: brightness(150%);
