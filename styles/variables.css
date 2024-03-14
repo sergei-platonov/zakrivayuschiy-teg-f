@@ -1,8 +1,8 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
 
 :root {
-  --main-font: 'Inter-Variable';
-  --accent-font: 'PressStart2P';
+  --main-font: 'Inter-Variable', serif;
+  --accent-font: 'PressStart2P', fantasy;
   --main-weight: 400;
   --accent-weight: 700;
   --bg-color: rgb(255 255 255 / 1);
@@ -39,6 +39,7 @@
   --heart-core-color: rgb(255 0 0 / 1);
   --heart-main-body-color: rgb(255 0 0 / 1);
   --heart-contour-color: rgb(0 0 0 / 1);
+  --label-color: rgb(0 0 0 / 0.8);
 }
 
 @media (width <= 375px) {

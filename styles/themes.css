@@ -15,7 +15,7 @@
   --gradient-color-second-end: #004306;
   --button-text-color: rgb(0 204 20 / 1);
   --heart-contour-color: rgb(0 204 20 / 1);
-
+  --label-color: rgb(0 204 20 / 0.8);
   --bg-image: repeating-linear-gradient(
       to right,
       var(--gradient-color-first),
@@ -38,6 +38,7 @@
 }
 
 @media (prefers-color-scheme: dark) {
+
   :root {
     --main-weight: 465;
     --accent-weight: 785;
@@ -48,6 +49,7 @@
     --gradient-color-second-end: #004306;
     --button-text-color: rgb(0 204 20 / 1);
     --heart-contour-color: rgb(0 204 20 / 1);
+    --label-color: rgb(0 204 20 / 0.8);
     --bg-image: repeating-linear-gradient(
         to right,
         var(--gradient-color-first),
@@ -79,6 +81,8 @@
   --gradient-color-second-start: #e7e7e7;
   --gradient-color-second-end: #1a1a1a;
   --heart-contour-color: rgb(0 0 0 / 1);
+  --button-text-color: #fff;
+  --label-color: rgb(0 0 0 / 0.8);
   --bg-image: repeating-linear-gradient(
       to right,
       var(--gradient-color-first),
